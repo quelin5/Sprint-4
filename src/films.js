@@ -72,9 +72,8 @@ function bestFilmOfYear(movies, year) {
   const newArray = movies.filter(pelicula => pelicula.year == year); //devuelve pelis de ese año
   let newPeli = newArray[0];
   newArray.forEach((peliculas) => (peliculas.score > newPeli.score) ? newPeli = peliculas : null); //da la nota. 
-  console.log(newPeli);
+  return newPeli;
 }
-bestFilmOfYear(movies, 2000);
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
